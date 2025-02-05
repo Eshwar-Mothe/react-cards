@@ -28,7 +28,7 @@ baseUrl = 'https://fakestoreapi.com/products'
   componentDidUpdate = (prevState) => {
     if ((prevState.count !== this.state.count) && (this.state.count > 0) ) {
       const id = this.state.count
-      fetch(`https://fakestoreapi.com/products/${id}`)
+      fetch(`${this.baseUrl}/${id}`)
       .then(res => res.json())
       .then(data => this.setState({ data }))
     }
